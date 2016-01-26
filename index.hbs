@@ -2,26 +2,474 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The big featured header }}
-<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-    <nav class="main-nav overlay clearfix">
-        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-        {{#if @blog.navigation}}
-            <a class="menu-button icon-menu" href="#"><span class="word">MMenu</span></a>
-        {{/if}}
-    </nav>
-    <div class="vertical">
-        <div class="main-header-content inner">
-            <h1 class="page-title">{{@blog.title}}</h1>
-            <h2 class="page-description">{{@blog.description}}</h2>
-        </div>
-    </div>
-    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+
+<header>
+    <a href="/">
+        <logo></logo>
+    </a>
+    <sns>
+        <a href="https://twitter.com/wwwthingscom" target="_blank"><sn class="fa fa-twitter"></sn></a>
+        <a href="https://www.facebook.com/wwwthings/" target="_blank"><sn class="fa fa-facebook"></sn></a>
+    </sns>
 </header>
+<canvas id="graph-theory"></canvas>
+<canvas id="the-dots"></canvas>
+<arrows>
+    <arrow mp-i="0"></arrow>
+    <arrow mp-i="1"></arrow>
+    <arrow mp-i="2"></arrow>
+</arrows>
+<panels>
+    <panel class="panel-splash" mp-panel="0">
+        <content>
+            <hero>
+                <svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="100%" viewBox="8.227 264.013 642 186"
+	 overflow="visible" enable-background="new 8.227 264.013 642 186" xml:space="preserve">
+<defs>
+</defs>
+<g id="_x31__1_">
+	<defs>
+		<rect id="w1_1_" y="2.23" width="106.498" height="257.768"/>
+	</defs>
+	<clipPath id="w1_2_">
+		<use xlink:href="#w1_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="30.9189" y1="270.5249" x2="80.2332" y2="451.3417">
+		<stop  offset="0.0112" style="stop-color:#48ADA6"/>
+		<stop  offset="0.2548" style="stop-color:#48ABA6"/>
+		<stop  offset="0.4059" style="stop-color:#45A7A7"/>
+		<stop  offset="0.5318" style="stop-color:#409FA8"/>
+		<stop  offset="0.6439" style="stop-color:#3B94A9"/>
+		<stop  offset="0.7469" style="stop-color:#3684A9"/>
+		<stop  offset="0.8431" style="stop-color:#3471A6"/>
+		<stop  offset="0.9323" style="stop-color:#355A9F"/>
+		<stop  offset="0.9944" style="stop-color:#374798"/>
+	</linearGradient>
+	<path clip-path="url(#w1_2_)" fill="url(#SVGID_1_)" d="M64.97,326.546c-4.869-17.51-9.736-35.021-14.604-52.53
+		c-2.166-7.79-30.955-3.128-38.731-3.128c11.131,38.806,22.262,77.61,33.393,116.416c5.022,17.511,10.044,35.02,15.067,52.531
+		c0.171,0.599,0.51,1.114,0.963,1.573c6.714,4.126,34.579,1.605,36.099,0.915C92.393,425.188,69.733,343.681,64.97,326.546z"/>
+</g>
+<g id="_x33__1_">
+	<defs>
+		<rect id="w3_1_" x="124.326" y="1.387" width="68.236" height="258.611"/>
+	</defs>
+	<clipPath id="w3_2_">
+		<use xlink:href="#w3_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="129.8613" y1="268.9331" x2="181.4218" y2="454.1385">
+		<stop  offset="0" style="stop-color:#374798"/>
+		<stop  offset="0.0818" style="stop-color:#345CA4"/>
+		<stop  offset="0.2295" style="stop-color:#327FB6"/>
+		<stop  offset="0.3563" style="stop-color:#3698C1"/>
+		<stop  offset="0.4557" style="stop-color:#3BA7C7"/>
+		<stop  offset="0.5153" style="stop-color:#3DACC9"/>
+		<stop  offset="0.5704" style="stop-color:#3BA7C7"/>
+		<stop  offset="0.6593" style="stop-color:#3699C2"/>
+		<stop  offset="0.7709" style="stop-color:#3282B8"/>
+		<stop  offset="0.8995" style="stop-color:#3462A7"/>
+		<stop  offset="0.9944" style="stop-color:#374798"/>
+	</linearGradient>
+	<path clip-path="url(#w3_2_)" fill="url(#SVGID_2_)" d="M164.53,326.546c-4.868-17.51-9.906-34.975-14.603-52.53
+		c-0.723-2.702-3.617-3.128-3.617-3.128s-3.321,0,0,0c-8.753-1.054-28.028-0.84-34.465,0.325
+		c5.186,18.082,27.555,98.01,32.741,116.091c5.022,17.511,10.045,35.02,15.068,52.531c0.332,1.156,1.236,2.031,2.543,2.69
+		c17.41,1.643,14.434,1.757,34.654,0.573C191.777,424.842,169.605,344.803,164.53,326.546z"/>
+</g>
+<g id="_x35__1_">
+	<defs>
+		<rect id="w5_1_" y="0" x="227.756" width="77.446" height="259.998"/>
+	</defs>
+	<clipPath id="w5_2_">
+		<use xlink:href="#w5_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="253.8306" y1="268.9502" x2="253.8306" y2="446.8473">
+		<stop  offset="0" style="stop-color:#AE3D67"/>
+		<stop  offset="0.5031" style="stop-color:#EA5268"/>
+		<stop  offset="1" style="stop-color:#AF3C67"/>
+	</linearGradient>
+	<path clip-path="url(#w5_2_)" fill="url(#SVGID_3_)" d="M264.161,326.148c-4.868-17.511-9.735-35.021-14.603-52.53
+		c-0.274-0.983-0.974-1.768-2-2.389c-18.862-2.05-19.407-2.067-36.244,0.97c4.879,17.006,28.024,97.701,32.902,114.707
+		c5.022,17.511,10.045,35.019,15.068,52.532c0.171,0.598,0.51,1.113,0.962,1.572c4.04,2.005,17.415,4.967,36.099,0.914
+		C291.584,424.793,268.923,343.282,264.161,326.148z"/>
+</g>
+<g id="_x37__1_">
+	<defs>
+		<rect id="w7_1_" x="329.055" y="2.455" width="68.389" height="257.543"/>
+	</defs>
+	<clipPath id="w7_2_">
+		<use xlink:href="#w7_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="328.3486" y1="267.4844" x2="380.0828" y2="451.4272">
+		<stop  offset="0" style="stop-color:#AF3C67"/>
+		<stop  offset="0.5031" style="stop-color:#EA5268"/>
+		<stop  offset="1" style="stop-color:#AF3C67"/>
+	</linearGradient>
+	<path clip-path="url(#w7_2_)" fill="url(#SVGID_4_)" d="M363.721,326.573c-4.868-17.51-9.735-35.021-14.603-52.53
+		c-1.244-4.473-11.266-4.838-21.048-4.341c7.079,0.35,14.111,1.213,17.432,1.213c-9.227-0.638-21.406-1.686-34.952,0.576
+		c5.187,18.082,28.041,97.76,33.228,115.841c5.023,17.511,10.045,35.019,15.069,52.531c0.332,1.155,1.236,2.03,2.543,2.69
+		c6.984,1.605,18.508,1.977,34.382,0.659C390.698,424.956,368.797,344.831,363.721,326.573z"/>
+</g>
+<g id="_x39__1_">
+	<defs>
+		<rect id="w9_1_" x="433.069" y="2.455" width="66.759" height="257.543"/>
+	</defs>
+	<clipPath id="w9_2_">
+		<use xlink:href="#w9_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="453.7842" y1="269.9175" x2="453.7842" y2="446.4187">
+		<stop  offset="0" style="stop-color:#4D244D"/>
+		<stop  offset="0.5" style="stop-color:#906E9C"/>
+		<stop  offset="1" style="stop-color:#4D244D"/>
+	</linearGradient>
+	<path clip-path="url(#w9_2_)" fill="url(#SVGID_5_)" d="M464.198,326.573c-4.868-17.51-9.734-35.021-14.603-52.53
+		c-0.334-1.201-1.306-2.104-2.73-2.776c-6.483-0.833-20.8-2.927-35.682,0.763c5.02,17.501,28.051,97.802,33.07,115.303
+		c5.022,17.511,10.046,35.019,15.068,52.531c0.172,0.598,0.51,1.113,0.962,1.572c5.669,2.353,22.651,3.63,36.101,0.915
+		C491.622,425.218,468.961,343.707,464.198,326.573z"/>
+</g>
+<g id="_x31_1_1_">
+	<defs>
+		<rect id="w11_1_" x="534.809" y="2.455" width="52.331" height="257.543"/>
+	</defs>
+	<clipPath id="w11_2_">
+		<use xlink:href="#w11_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="529.1094" y1="269.5767" x2="579.7802" y2="453.3656">
+		<stop  offset="0" style="stop-color:#4D244D"/>
+		<stop  offset="0.5" style="stop-color:#906E9C"/>
+		<stop  offset="1" style="stop-color:#4D234D"/>
+	</linearGradient>
+	<path clip-path="url(#w11_2_)" fill="url(#SVGID_6_)" d="M563.759,326.573c-4.868-17.51-9.736-35.021-14.604-52.53
+		c-1.244-4.473-11.267-4.838-21.047-4.341c7.079,0.35,14.109,1.213,17.431,1.213c-9.735-1.365-25.402-2.621-34.952,0.576
+		c5.186,18.082,28.042,97.76,33.229,115.841c5.024,17.511,10.046,35.019,15.069,52.531c0.332,1.155,1.236,2.03,2.544,2.69
+		c6.75,0.369,16.92,2.778,34.45,0.103C590.802,424.398,568.834,344.831,563.759,326.573z"/>
+</g>
+<g id="tekst_1_" transform="translate(-100,0)">
+<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="262.1226" y1="303.0146" x2="262.1226" y2="413.0146">
+	<stop  offset="0" style="stop-color:#F0F0F0"/>
+	<stop  offset="0.251" style="stop-color:#F4F4F4"/>
+	<stop  offset="0.4908" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#E0E0E0"/>
+</linearGradient>
+<rect x="250.487" y="300.49" fill="url(#SVGID_7_)" width="23.272" height="112.106"/>
+<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="340.7261" y1="303.0146" x2="340.7261" y2="413.0146">
+	<stop  offset="0" style="stop-color:#F0F0F0"/>
+	<stop  offset="0.251" style="stop-color:#F4F4F4"/>
+	<stop  offset="0.4908" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#E0E0E0"/>
+</linearGradient>
+<polygon fill="url(#SVGID_8_)" points="364.342,300.49 364.342,378.659 319.84,300.49 295.283,300.49 295.283,412.597
+	317.11,412.597 317.11,333.053 362.749,412.597 386.169,412.597 386.169,300.49 "/>
+<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="184.811" y1="303.0146" x2="184.811" y2="413.0146">
+	<stop  offset="0" style="stop-color:#F0F0F0"/>
+	<stop  offset="0.251" style="stop-color:#F4F4F4"/>
+	<stop  offset="0.4908" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#E0E0E0"/>
+</linearGradient>
+<polygon fill="url(#SVGID_9_)" points="206.602,300.49 206.602,343.233 163.021,343.233 163.021,300.49 139.748,300.49
+	139.748,412.597 163.021,412.597 163.021,362.552 206.602,362.552 206.602,412.597 229.875,412.597 229.875,300.49 "/>
+<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="570.3018" y1="303.0146" x2="570.3018" y2="413.0146">
+	<stop  offset="0" style="stop-color:#F0F0F0"/>
+	<stop  offset="0.251" style="stop-color:#F4F4F4"/>
+	<stop  offset="0.4908" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#E0E0E0"/>
+</linearGradient>
+<polygon fill="url(#SVGID_10_)" points="606.748,356.923 587.357,348.786 567.684,344.146 552.79,339.506 547.332,330.532
+	552.866,320.34 567.684,316.69 581.64,319.503 590.685,333.878 613.197,333.878 599.915,306.612 569.311,297.22 536.743,307.183
+	525.656,332.205 536.988,356.467 561.574,365.062 573.712,367.724 589.275,372.971 594.183,381.566 584.164,394.571
+	570.419,396.396 550.463,389.476 546.191,377.991 523.831,377.991 536.514,405.485 571.338,415.486 604.894,405.333
+	616.772,379.816 "/>
+<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="454.8477" y1="303.0146" x2="454.8477" y2="413.0146">
+	<stop  offset="0" style="stop-color:#F0F0F0"/>
+	<stop  offset="0.251" style="stop-color:#F4F4F4"/>
+	<stop  offset="0.4908" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#E0E0E0"/>
+</linearGradient>
+<polygon fill="url(#SVGID_11_)" points="460.248,352.436 460.248,371.146 486.185,371.146 476.904,388.872 457.587,395.636
+	436.14,387.058 426.707,357.832 435.416,327.128 457.663,316.918 470.517,319.428 483.522,335.475 506.566,335.475 491.697,308.438
+	457.359,297.6 417.733,314.017 402.749,357.645 417.581,400.057 454.088,415.486 476.904,409.808 489.074,398.603 491.432,412.597
+	506.947,412.597 506.947,352.436 "/>
+<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="80.8047" y1="303.0146" x2="80.8047" y2="413.0146">
+	<stop  offset="0" style="stop-color:#F0F0F0"/>
+	<stop  offset="0.251" style="stop-color:#F4F4F4"/>
+	<stop  offset="0.4908" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#E0E0E0"/>
+</linearGradient>
+<polygon fill="url(#SVGID_12_)" points="35.399,300.49 35.399,320.34 69.092,320.34 69.092,412.597 92.67,412.597 92.67,320.34
+	126.21,320.34 126.21,300.49 "/>
+</g>
+<g id="_x34__1_">
+	<defs>
+		<rect id="w4_1_" x="160.477" y="445.469" width="87.082" height="208.756"/>
+	</defs>
+	<clipPath id="w4_2_">
+		<use xlink:href="#w4_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_13_" gradientUnits="userSpaceOnUse" x1="204.8784" y1="269.5444" x2="204.8784" y2="443.6076">
+		<stop  offset="0.0112" style="stop-color:#3090CF"/>
+		<stop  offset="0.5" style="stop-color:#48ADA6"/>
+		<stop  offset="1" style="stop-color:#3090CF"/>
+	</linearGradient>
+	<path clip-path="url(#w4_2_)" fill="url(#SVGID_13_)" d="M245.689,270.403c-3.815-1.304-9.871-1.43-15.981-1.167
+		c-5.775-0.259-11.496-0.141-15.198,1.092c-1.38,0.46-2.481,1.074-3.195,1.886c-0.362,0.412-0.633,0.872-0.782,1.391
+		c-5.022,17.51-10.045,35.021-15.067,52.53c-5.237,18.257-10.474,36.514-15.71,54.771c-5.853,20.403-11.705,40.808-17.559,61.209
+		c0.332,0.168,0.68,0.326,1.062,0.466c3.843,1.411,10.124,1.488,16.349,1.176c9.83,0.51,19.947,0.163,21.198-4.333
+		c4.867-17.512,9.735-35.021,14.604-52.532c4.725-16.996,9.449-33.992,14.174-50.988c5.992-21.554,11.983-43.106,17.975-64.66
+		C247.023,270.92,246.392,270.644,245.689,270.403z"/>
+</g>
+<g id="_x32__1_">
+	<defs>
+		<rect id="w2_1_" x="59.924" y="445.469" width="89.542" height="224.814"/>
+	</defs>
+	<clipPath id="w2_2_">
+		<use xlink:href="#w2_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="103.6841" y1="269.084" x2="103.6841" y2="444.4054">
+		<stop  offset="0.0112" style="stop-color:#3090CF"/>
+		<stop  offset="0.0242" style="stop-color:#3192CE"/>
+		<stop  offset="0.1673" style="stop-color:#3A9EC0"/>
+		<stop  offset="0.2968" style="stop-color:#41A6B2"/>
+		<stop  offset="0.4069" style="stop-color:#47ABA9"/>
+		<stop  offset="0.4847" style="stop-color:#48ADA6"/>
+		<stop  offset="1" style="stop-color:#3090CF"/>
+	</linearGradient>
+	<path clip-path="url(#w2_2_)" fill="url(#SVGID_14_)" d="M128.878,269.265c-6.286,0.32-12.463,0.994-16.157,1.169
+		c-0.5,0.181-0.949,0.392-1.362,0.62c-1.167,0.644-1.979,1.474-2.287,2.552c-5.023,17.51-10.046,35.021-15.069,52.53
+		c-4.914,17.135-9.829,34.269-14.743,51.403c-6.068,21.153-12.135,42.306-18.203,63.459c0.72,0.729,1.764,1.292,3.058,1.718
+		c3.657,1.204,9.26,1.331,14.938,1.087c6.342,0.292,12.688,0.187,16.583-1.199c0.563-0.201,1.065-0.434,1.52-0.69
+		c1.124-0.637,1.898-1.449,2.188-2.488c4.868-17.512,9.735-35.021,14.603-52.532c5.027-18.081,10.054-36.163,15.081-54.245
+		c5.76-20.723,11.522-41.447,17.283-62.17C139.388,268.319,131.359,269.329,128.878,269.265z"/>
+</g>
+<g id="_x36__1_">
+	<defs>
+		<rect id="w6_1_" x="259.425" y="445.441" width="86.077" height="214.192"/>
+	</defs>
+	<clipPath id="w6_2_">
+		<use xlink:href="#w6_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_15_" gradientUnits="userSpaceOnUse" x1="302.8745" y1="271.0083" x2="302.8745" y2="444.0034">
+		<stop  offset="0" style="stop-color:#EA5B67"/>
+		<stop  offset="0.5" style="stop-color:#F7B73E"/>
+		<stop  offset="1" style="stop-color:#EA5B67"/>
+	</linearGradient>
+	<path clip-path="url(#w6_2_)" fill="url(#SVGID_15_)" d="M328.07,269.292c-6.159-0.193-12.34-0.216-16.156,1.168
+		c-0.501,0.183-0.949,0.393-1.364,0.621c-1.166,0.644-1.979,1.474-2.287,2.552c-5.022,17.51-10.046,35.02-15.068,52.53
+		c-4.915,17.134-9.83,34.268-14.744,51.401c-6.068,21.153-12.136,42.307-18.203,63.461c0.72,0.729,1.765,1.292,3.06,1.719
+		c3.657,1.205,9.263,1.331,14.942,1.087c6.339,0.292,12.681,0.185,16.575-1.199c0.565-0.202,1.068-0.435,1.521-0.692
+		c1.125-0.636,1.899-1.448,2.189-2.487c4.867-17.513,9.735-35.021,14.603-52.532c5.026-18.081,10.054-36.163,15.08-54.243
+		c5.761-20.724,11.522-41.449,17.284-62.173C339.616,268.541,330.251,269.36,328.07,269.292z"/>
+</g>
+<g id="_x38__1_">
+	<defs>
+		<rect id="w8_1_" x="359.881" y="445.441" width="86.984" height="214.192"/>
+	</defs>
+	<clipPath id="w8_2_">
+		<use xlink:href="#w8_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="404.1279" y1="270.0903" x2="404.1279" y2="444.6356">
+		<stop  offset="0" style="stop-color:#EA5B67"/>
+		<stop  offset="0.4969" style="stop-color:#F7B73E"/>
+		<stop  offset="1" style="stop-color:#EA5B67"/>
+	</linearGradient>
+	<path clip-path="url(#w8_2_)" fill="url(#SVGID_16_)" d="M445.959,270.482c-3.949-1.433-10.469-1.525-16.95-1.213
+		c-5.873-0.268-11.71-0.153-15.431,1.126c-0.949,0.327-1.756,0.731-2.395,1.224c-0.719,0.555-1.23,1.215-1.459,2.014
+		c-5.021,17.51-10.046,35.02-15.067,52.53c-5.237,18.257-10.473,36.514-15.71,54.771c-5.852,20.403-11.704,40.806-17.557,61.209
+		c0.332,0.168,0.68,0.326,1.062,0.466c3.843,1.411,10.125,1.489,16.352,1.175c9.827,0.509,19.943,0.163,21.192-4.331
+		c4.867-17.513,9.735-35.021,14.605-52.532c4.865-17.5,9.729-35,14.594-52.5c5.889-21.188,11.78-42.377,17.67-63.565
+		C446.58,270.722,446.279,270.598,445.959,270.482z"/>
+</g>
+<g id="_x31_0_1_">
+	<defs>
+		<rect id="w10_1_" x="460.284" y="445.441" width="85.254" height="214.192"/>
+	</defs>
+	<clipPath id="w10_2_">
+		<use xlink:href="#w10_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="502.9111" y1="270.6099" x2="502.9111" y2="444.8201">
+		<stop  offset="0" style="stop-color:#6A2383"/>
+		<stop  offset="0.5" style="stop-color:#8187C2"/>
+		<stop  offset="1" style="stop-color:#692481"/>
+	</linearGradient>
+	<path clip-path="url(#w10_2_)" fill="url(#SVGID_17_)" d="M528.107,269.292c-6.159-0.122-12.34-0.216-16.157,1.168
+		c-0.501,0.183-0.951,0.393-1.364,0.621c-1.165,0.644-1.978,1.474-2.286,2.552c-5.022,17.51-10.046,35.02-15.069,52.53
+		c-4.914,17.134-9.829,34.268-14.743,51.401c-6.067,21.153-12.135,42.307-18.203,63.461c0.722,0.729,1.766,1.292,3.06,1.719
+		c3.658,1.205,9.263,1.331,14.943,1.087c6.34,0.292,12.682,0.185,16.576-1.199c0.565-0.202,1.066-0.435,1.521-0.692
+		c1.123-0.636,1.898-1.448,2.188-2.487c4.868-17.513,9.735-35.021,14.603-52.532c5.026-18.081,10.055-36.163,15.08-54.243
+		c8.845-31.812,13.311-47.882,17.283-62.173C536.85,268.244,531.005,269.35,528.107,269.292z"/>
+</g>
+<g id="_x31_2_1_">
+	<defs>
+		<rect id="w12_1_" x="561.428" y="445.441" width="85.571" height="214.192"/>
+	</defs>
+	<clipPath id="w12_2_">
+		<use xlink:href="#w12_1_"  overflow="visible"/>
+	</clipPath>
+	<linearGradient id="SVGID_18_" gradientUnits="userSpaceOnUse" x1="604.2129" y1="270.8276" x2="604.2129" y2="445.0578">
+		<stop  offset="0" style="stop-color:#692481"/>
+		<stop  offset="0.5" style="stop-color:#8187C1"/>
+		<stop  offset="1" style="stop-color:#692481"/>
+	</linearGradient>
+	<path clip-path="url(#w12_2_)" fill="url(#SVGID_18_)" d="M609.762,273.633c-5.021,17.51-10.046,35.02-15.067,52.53
+		c-5.236,18.257-10.474,36.514-15.71,54.771c-5.852,20.403-11.704,40.806-17.557,61.209c0.331,0.168,0.68,0.326,1.061,0.466
+		c3.845,1.411,10.126,1.489,16.353,1.175c9.827,0.509,19.944,0.163,21.192-4.331c4.867-17.513,9.734-35.021,14.605-52.532
+		c10.786-38.806,21.576-77.612,32.36-116.417C639.347,270.505,611.976,265.91,609.762,273.633z"/>
+</g>
+</svg>
 
-{{! The main content area on the homepage }}
-<main id="content" class="content" role="main">
 
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
+            </hero>
+            <subtitle>Internet of Things & Big Data Hackathon 2016</subtitle>
+            <border></border>
+            <div>Friday 30 Sept & Saturday 1 Oct, 2016
+                <br/>Alkmaar, The Netherlands
+            </div>
+            <a class="button" href="mailto:hello@wwwthings.com">
+                <inner>Request for sponsors & volunteers</inner>
+            </a>
+        </content>
+    </panel>
+    {{! The main content area on the homepage }}
+    <main id="content" class="content" role="main">
 
-</main>
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        {{> "loop"}}
+
+    </main>
+
+    <panel class="panel-schedule" mp-panel="3">
+        <content>
+            <segment>Schedule</segment>
+            <line>
+                <moment>
+                    <time>9:00 - 9:30
+                        <small>Friday</small>
+                    </time>
+                    <dot></dot>
+                    <tail></tail>
+                    <event>
+                        <loud>Registration</loud>
+                    </event>
+                </moment>
+                <moment>
+                    <time>9:30 - 10:10
+                        <small>Friday</small>
+                    </time>
+                    <dot></dot>
+                    <tail></tail>
+                    <event>
+                        <loud>Welcome</loud>
+                        <small>Opening by Reinier Sierag
+                            <soft>RAADHUIS</soft>
+                        </small>
+                        <small>Word from Els Schipper
+                            <soft>KARAVAAN</soft>
+                        </small>
+                        <normal>Theatre inspiration</normal>
+                        <soft>Details to be announced</soft>
+                    </event>
+                </moment>
+                <moment>
+                    <time>10:10 - 10:30
+                        <small>Friday</small>
+                    </time>
+                    <dot></dot>
+                    <tail></tail>
+                    <event>
+                        <loud>Small Sponsors Keynotes</loud>
+                        <small>To be Announced</small>
+                    </event>
+                </moment>
+                <moment>
+                    <time>10:30 - 11:20
+                        <small>Friday</small>
+                    </time>
+                    <dot></dot>
+                    <tail></tail>
+                    <event>
+                        <loud>Global Sponsors Keynotes</loud>
+                        <small>To be Announced</small>
+                    </event>
+                </moment>
+                <moment>
+                    <time>next 32 hours</time>
+                    <dot></dot>
+                    <tail></tail>
+                    <event>
+                        <loud>Let the Hacks begin!</loud>
+                    </event>
+                </moment>
+                <moment>
+                    <time>18:00-18:30
+                        <small>Saturday</small>
+                    </time>
+                    <dot></dot>
+                    <tail></tail>
+                    <event>
+                        <loud>End of Hackathon</loud>
+                        <normal>Theatre inspiration</normal>
+                    </event>
+                </moment>
+                <moment>
+                    <time>18:30-19:30
+                        <small>Saturday</small>
+                    </time>
+                    <dot></dot>
+                    <tail></tail>
+                    <event>
+                        <loud>Hack Presentations</loud>
+                    </event>
+                </moment>
+                <moment>
+                    <time>19:30-20:30
+                        <small>Saturday</small>
+                    </time>
+                    <dot></dot>
+                    <tail></tail>
+                    <event>
+                        <loud>Awarding of prizes</loud>
+                    </event>
+                </moment>
+                <moment>
+                    <time>21:00 <</time>
+                    <dot></dot>
+                    <event>
+                        <loud>After Party</loud>
+                        <normal>Featuring DJ Data</normal>
+                    </event>
+                </moment>
+            </line>
+        </content>
+    </panel>
+    <panel class="panel-map" mp-panel="5">
+        <map></map>
+        <a href="https://goo.gl/maps/9fh4AeTpCcA2" target="_blank">
+            <venue>
+                <hothead>Venue
+                    <slash>/</slash>
+                    <date>30.11.2016</date>
+                </hothead>
+                <hotbod>
+                    <name>Kapelkerk</name>
+                    <address>
+                        <border></border>
+                        <div>Laat 80</div>
+                        <div>1811 EK</div>
+                    </address>
+                    <info>
+                        <border></border>
+                        <box class="location">
+                            <type>Location</type>
+                            <div>Alkmaar / NL</div>
+                        </box>
+                        <box class="space">
+                            <border></border>
+                            <type>Build Year</type>
+                            <div>1475</div>
+                        </box>
+                    </info>
+                </hotbod>
+            </venue>
+        </a>
+    </panel>
+</panels>
+<a href="//wwwthings.slack.com" class="message-box"></a>

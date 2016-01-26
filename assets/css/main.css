@@ -1,0 +1,903 @@
+@import url(https://fonts.googleapis.com/css?family=Megrim|Teko:500|Lekton);
+
+html, body {
+  height: 100%;
+  width: 100%
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none
+}
+
+a, a:visited {
+  color: inherit;
+  text-decoration: none
+}
+
+body {
+  color: white;
+  font-family: 'Lekton', sans-serif;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#161d37+0,1c132a+100 */
+  background: #161d37; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #161d37 0%, #1c132a 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #161d37 0%,#1c132a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #161d37 0%,#1c132a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#161d37', endColorstr='#1c132a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+clear {
+  clear: both
+}
+
+#graph-theory {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#the-dots {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%
+}
+
+header {
+  opacity: 0;
+}
+
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#48ada6+0,3191cd+99&1+0,0.82+100 */
+  background: -moz-linear-gradient(45deg,  rgba(72,173,166,1) 0%, rgba(49,145,205,0.82) 99%, rgba(49,145,205,0.82) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  rgba(72,173,166,1) 0%,rgba(49,145,205,0.82) 99%,rgba(49,145,205,0.82) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  rgba(72,173,166,1) 0%,rgba(49,145,205,0.82) 99%,rgba(49,145,205,0.82) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ada6', endColorstr='#d13191cd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  line-height: 66px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  z-index: 10000
+}
+
+header logo {
+  display: inline-block;
+  width: 228px;
+  height: 37px;
+  margin-left: 45px;
+  vertical-align: middle;
+}
+
+header sn {
+  float: right;
+  width: 60px;
+  height: 100%;
+  background: center no-repeat;
+  cursor: pointer
+}
+
+@-webkit-keyframes arrows {
+  from {
+    opacity: 0
+  }
+  25% {
+    opacity: 1
+  }
+  50% {
+    opacity: 0
+  }
+  to {
+    opacity: 0
+  }
+}
+
+arrows {
+  display: block;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -12px;
+  width: 25px
+}
+
+arrows {
+  display: block;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -12px;
+  width: 25px
+}
+
+arrows arrow {
+  display: block;
+  width: 100%;
+  height: 13px;
+  opacity: 0;
+  -webkit-animation: arrows 2s ease-in-out infinite;
+  background-image: url('../images/arrow-blue.png')
+}
+
+arrows arrow[mp-i="1"] {
+  -webkit-animation-delay: .2s;
+  background-image: url('../images/arrow-teal.png')
+}
+
+arrows arrow[mp-i="2"] {
+  -webkit-animation-delay: .4s;
+  background-image: url('../images/arrow-green.png')
+}
+
+panel {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0)
+}
+
+panel[mp-panel="0"] {
+  top: 0;
+}
+
+panel segment {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 32px;
+  font-family: sans-serif;
+  margin: 125px auto 20px;
+  text-align: center
+}
+
+panel segment::after {
+  content: '';
+  display: block;
+  margin: 30px auto 0;
+  width: 50px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3)
+}
+
+panel content {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px
+}
+
+panel content hero {
+  display: block;
+  height: 180px;
+  margin-bottom: 32px;
+}
+
+panel content subtitle {
+  opacity: 0;
+  display: block;
+  margin: 32px 0 32px;
+  color: white;
+  font-size: 32px;
+  letter-spacing: 4px;
+  line-height: 32px;
+  font-family: 'Megrim', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.63);
+}
+
+panel content div, panel content a {
+  opacity: 0;
+  margin: 32px 0 32px;
+
+}
+
+panel content loud {
+  display: block;
+  font-size: 56px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Teko', sans-serif;
+  color: #00c0c8
+}
+
+panel.panel-about loud inner {
+  background-image: linear-gradient(45deg, #dd03ac, #db9212);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+panel content loud inner {
+  background-image: linear-gradient(45deg, #2e90d2 0, #00c0c8 47%, #4baca4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+panel content slash {
+  margin: 0 10px;
+  letter-spacing: 2px;
+  font-weight: 300
+}
+
+panel content border {
+  background: #546b7f;
+  height: 1px;
+  margin: 30px 0
+}
+
+panel content .button, panel content button {
+  display: inline-block;
+  width: 255px;
+  background: -webkit-linear-gradient(45deg, #2e90d2 0, #00c0c8 47%, #4baca4 100%);
+  background: linear-gradient(45deg, #2e90d2 0, #00c0c8 47%, #4baca4 100%);
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Lekton", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center
+}
+
+panel content .button:hover inner, panel content button:hover inner {
+  background: transparent
+}
+
+panel content .button inner, panel content button inner {
+  display: block;
+  margin: 3px;
+  padding: 25px 0;
+  background: #16293f;
+  -webkit-transition: background-color .2s, color .2s;
+  transition: background-color .2s, color .2s
+}
+
+panel.panel-splash, panel.panel-splash-two {
+  text-transform: uppercase;
+  font-family: 'Teko', 'Source Sans Pro', sans-serif
+}
+
+panel.panel-splash content, panel.panel-splash-two content {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -250px;
+  width: 500px;
+  max-width: 100%;
+  height: 500px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-weight: 500
+}
+
+panel.panel-splash subtitle {
+  background-image: linear-gradient(45deg, #2e90d2 0, #00c0c8 47%, #4baca4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+panel.panel-splash-two subtitle {
+  margin-bottom: 0
+}
+
+panel.panel-splash-two .button {
+  margin-top: 90px
+}
+
+panel.panel-splash-two .button inner {
+  background: #253a52
+}
+
+panel.panel-about {
+  display: none;
+  height: 1950px
+}
+
+panel.panel-about content {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+  padding-top: 150px;
+  width: 100%;
+  max-width: 1245px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.5
+}
+
+panel.panel-about content box {
+  display: block;
+  width: 550px;
+  margin: 155px 50px 0
+}
+
+panel.panel-about content box.globe {
+  position: absolute;
+  top: 1040px;
+  right: 0;
+  margin: 0
+}
+
+panel.panel-about loud {
+  color: #dd03ac
+}
+
+panel.panel-about loud::after {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+panel.panel-about div {
+  display: block;
+  margin-top: 25px;
+  font-size: 26px;
+  line-height: 1.25
+}
+
+panel.panel-about p {
+  font-size: 22px;
+  color: #b2c9e2
+}
+
+panel.panel-about box loud {
+  font-size: inherit
+}
+
+panel.panel-about companies {
+  position: absolute;
+  top: 50px;
+  right: 200px;
+  width: 320px;
+  height: 800px
+}
+
+panel.panel-about companies company {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 88px;
+  width: 313px;
+  height: 250px;
+  background: no-repeat top left;
+  background-size: 100%;
+  background-image: url('//cdn.mxpnl.com/cache/73dbaa89bf958f67775d61d2c983644e/images/static/landing/ddc2014-final/sphere-google.png')
+}
+
+panel.panel-about companies company capt {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: -200px;
+  width: 190px;
+  font-size: 20px;
+  line-height: 1.25;
+  font-style: italic
+}
+
+panel.panel-about companies company.netflix {
+  top: 338px;
+  left: 196px;
+  width: 324px;
+  height: 252px;
+  background-image: url('//cdn.mxpnl.com/cache/3577dca6da84557afbc3dfe99ab51e1a/images/static/landing/ddc2014-final/sphere-netflix.png')
+}
+
+panel.panel-about companies company.netflix capt {
+  top: 171px;
+  left: -198px;
+  right: auto;
+  text-align: center
+}
+
+panel.panel-about companies company.palantir {
+  top: 663px;
+  background-image: url('//cdn.mxpnl.com/cache/36d70fc320a3b08bd655790585dba6ea/images/static/landing/ddc2014-final/sphere-palantir.png');
+  width: 323px;
+  height: 250px
+}
+
+panel.panel-about companies company.palantir capt {
+  top: 74px
+}
+
+panel.panel-about earth {
+  display: block;
+  position: absolute;
+  top: 883px;
+  left: 0;
+  width: 713px;
+  height: 697px;
+  background-size: 100%;
+  background: no-repeat;
+  background-image: url('//cdn.mxpnl.com/cache/d40c31d682d8b47d390353cae308d066/images/static/landing/ddc2014-final/earth.png')
+}
+
+panel.panel-speakers {
+  height: auto
+}
+
+panel.panel-speakers content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1266px;
+  margin: 0 auto
+}
+
+panel.panel-speakers section {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 26px;
+  line-height: 1.5
+}
+
+panel.panel-speakers speakers {
+  font-size: 0
+}
+
+panel.panel-speakers speaker {
+  display: inline-block;
+  position: relative;
+  width: 363px;
+  padding-top: 430px;
+  vertical-align: top;
+  background: center top no-repeat;
+  background-size: auto 400px;
+  font-weight: 500;
+  letter-spacing: 0
+}
+
+panel.panel-speakers speaker[mp-name="marc"] {
+  background-image: url('//cdn.mxpnl.com/cache/e77dae2b1a7f040ab368847e17ddeeb2/images/static/landing/ddc2014-final/marc.jpg')
+}
+
+panel.panel-speakers speaker[mp-name="max"] {
+  margin: 95px 85px;
+  background-image: url('//cdn.mxpnl.com/cache/c49053b94c1872e2818001a649f812e0/images/static/landing/ddc2014-final/max.jpg')
+}
+
+panel.panel-speakers speaker[mp-name="leah"] {
+  background-image: url('//cdn.mxpnl.com/cache/b93bd53fe9ea9114fbcc88a987da8708/images/static/landing/ddc2014-final/leah.jpg')
+}
+
+panel.panel-speakers speaker info {
+  display: block;
+  width: 100%;
+  color: white
+}
+
+panel.panel-speakers speaker name {
+  display: block;
+  font-size: 35px;
+  font-family: 'Lekton', sans-serif;
+  margin: 18px 0 7px;
+  text-transform: uppercase
+}
+
+panel.panel-speakers speaker prof {
+  display: block;
+  font-size: 20px;
+  font-style: italic;
+  margin: 0 0 18px
+}
+
+panel.panel-schedule {
+  height: auto
+}
+
+panel.panel-schedule content {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 610px
+}
+
+panel.panel-schedule line {
+  display: block;
+  margin-top: 75px
+}
+
+panel.panel-schedule moment {
+  display: block;
+  position: relative;
+  padding-left: 190px;
+  padding-bottom: 70px
+}
+
+panel.panel-schedule moment time {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: -10px;
+  width: 120px;
+  font-size: 21px;
+  font-family: 'Megrim', sans-serif;
+  text-align: right
+}
+
+panel.panel-schedule moment event {
+  display: block;
+  text-align: left
+}
+
+panel.panel-schedule moment dot {
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 138px;
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+  border: 4px solid #44aead
+}
+
+panel.panel-schedule moment tail {
+  display: block;
+  position: absolute;
+  top: 27px;
+  left: 146px;
+  width: 4px;
+  height: calc(100% - 27px);
+  background: #44aead
+}
+
+panel.panel-schedule loud {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-transform: none;
+  line-height: 1.25;
+  color: white
+}
+
+panel.panel-schedule normal {
+  display: block;
+  font-size: 18px;
+  font-family: 'Lekton', sans-serif;
+  font-weight: 600;
+  padding: 5px 0
+}
+
+panel.panel-schedule soft {
+  display: block;
+  font-size: 18px;
+  color: #7093bb;
+  margin: 2px 0 17px
+}
+
+panel.panel-schedule small {
+  display: block;
+  font-size: 17px;
+  padding-top: 5px;
+  margin-bottom: 17px
+}
+
+panel.panel-schedule small soft {
+  display: inline;
+  font-size: inherit;
+  margin: 0
+}
+
+panel.panel-map {
+  height: 900px;
+  background: center bottom no-repeat;
+  background-size: contain;
+  background-image: url('../images/alkmaarmap.png')
+}
+
+panel.panel-map venue {
+  display: block;
+  position: absolute;
+  bottom: 425px;
+  right: 50%;
+  margin-right: -100px;
+  width: 383px;
+  height: 319px;
+  font-family: 'Lekton', sans-serif;
+  text-transform: uppercase;
+  color: #b0d2f8
+}
+
+panel.panel-map venue::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -163px;
+  bottom: -168px;
+  width: 163px;
+  height: 168px;
+  background: center bottom no-repeat;
+  background-image: url('//cdn.mxpnl.com/cache/d9c1a79357401e8d04c7272163d05420/images/static/landing/ddc2014-final/map-marker.png');
+}
+
+panel.panel-map venue::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 5px;
+  height: 5px;
+  background: #2eb0ac
+}
+
+panel.panel-map venue hothead {
+  display: block;
+  height: 63px;
+  padding-left: 24px;
+  background: rgba(22, 39, 60, 0.8) right 15px center no-repeat;
+  line-height: 63px;
+  font-size: 22px;
+  color: #28a5dd;
+  background-image: url('//cdn.mxpnl.com/cache/d722d4c1f752f90e31a52001fb7bb28a/images/static/landing/ddc2014-final/venue-icon.png')
+}
+
+panel.panel-map venue hothead::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: -webkit-linear-gradient(#2e90d2 0, #00c0c8 47%, #4baca4 100%);
+  background: linear-gradient(#2e90d2 0, #00c0c8 47%, #4baca4 100%)
+}
+
+panel.panel-map venue hothead date {
+  color: #b0d2f8
+}
+
+panel.panel-map venue hotbod {
+  display: block;
+  position: relative;
+  height: 256px;
+  padding-left: 24px;
+  background: rgba(17, 32, 50, 0.8) no-repeat 206px 15px;
+  font-size: 22px;
+  background-image: url('../images/532px-Alkmaar-Kapelsteeg_3.jpg');
+
+}
+
+panel.panel-map venue hotbod name {
+  display: block;
+  height: 63px;
+  line-height: 63px;
+  color: #44aead
+}
+
+panel.panel-map venue hotbod address {
+  display: block;
+  padding-top: 18px;
+  line-height: 1.5;
+  font-size: 16px
+}
+
+panel.panel-map venue hotbod border {
+  display: block;
+  position: absolute;
+  top: 61px;
+  left: 16px;
+  width: 176px;
+  height: 1px;
+  background: #1b4e6e
+}
+
+panel.panel-map venue hotbod border::before, panel.panel-map venue hotbod border::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 3px;
+  height: 3px;
+  background: #28a5dd
+}
+
+panel.panel-map venue hotbod border::after {
+  left: auto;
+  right: 0
+}
+
+panel.panel-map venue info {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 63px
+}
+
+panel.panel-map venue info border {
+  top: -15px;
+  left: -8px;
+  width: 351px
+}
+
+panel.panel-map venue info box {
+  display: block;
+  position: absolute;
+  width: 137px;
+  font-size: 20px
+}
+
+panel.panel-map venue info box.location {
+  left: 0;
+  width: 170px
+}
+
+panel.panel-map venue info box.space {
+  left: 220px
+}
+
+panel.panel-map venue info box type {
+  font-size: 14px;
+  font-weight: 700;
+  color: #50739c
+}
+
+panel.panel-map venue info box border {
+  width: 1px;
+  height: 57px;
+  left: -22px
+}
+
+panel.panel-map venue info box border::before {
+  display: none
+}
+
+panel.panel-map venue info box border::after {
+  top: auto;
+  bottom: 0;
+  right: -1px
+}
+
+@media(max-width: 1350px) {
+  panel.panel-map {
+    background-position: right bottom
+  }
+  panel.panel-map venue {
+    margin-right: 0;
+    right: 400px
+  }
+}
+
+@media(max-width: 1260px) {
+  panel.panel-speakers speaker[mp-name="max"] {
+    margin: 0 0 50px 85px
+  }
+  panel.panel-speakers speaker[mp-name="leah"] {
+    display: block;
+    margin: 0 auto
+  }
+}
+
+@media(max-width: 980px) {
+  panel.panel-speakers speaker[mp-name="max"] {
+    margin: 0 0 50px 30px
+  }
+}
+
+@media(max-width: 1180px) {
+  panel.panel-about {
+    height: 1650px
+  }
+  panel.panel-about companies {
+  }
+  panel.panel-about earth {
+    width: 50%;
+    background-size: 100%
+  }
+  panel.panel-about content box.globe {
+    top: 810px;
+    width: 40%;
+    right: 20px
+  }
+}
+
+@media(max-width: 760px) {
+  panel.panel-speakers speaker, panel.panel-speakers speaker[mp-name="max"] {
+    margin: 0 0 30px
+  }
+}
+
+@media(max-width: 800px) {
+  panel.panel-about {
+    height: auto;
+    margin-bottom: 200px
+  }
+  panel.panel-about earth {
+    display: none
+  }
+  panel.panel-about content box.first {
+    width: auto;
+    margin: 50px 30px
+  }
+  panel.panel-about content box.globe {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    margin: 50px 30px
+  }
+  panel.panel-map venue {
+    right: 50%;
+    margin-right: -192.5px
+  }
+  panel.panel-map venue::before {
+    display: none
+  }
+}
+
+@media(max-width: 515px) {
+  panel.panel-splash content, panel.panel-splash-two content {
+    margin-left: 0;
+    left: 0
+  }
+}
+
+@media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+  header logo {
+    background-size: 100%;
+    background: url('../images/logo_dark_bg_small.svg') no-repeat;
+    background-size: contain;
+  }
+  panel content subtitle {
+    background-size: 384px auto
+  }
+  panel content globe {
+    background-image: url('../images/globe@2x.png')
+  }
+  panel content venue::before {
+    background-image: url('../images/map-marker@2x.png')
+  }
+  panel content venue hothead {
+    background-image: url('../images/venue-icon@2x.png')
+  }
+  arrows arrow {
+    background-image: url('../images/arrow-blue@2x.png');
+    background-size: 100%
+  }
+  arrows arrow[mp-i="1"] {
+    background-image: url('../images/arrow-teal@2x.png')
+  }
+  arrows arrow[mp-i="2"] {
+    background-image: url('../images/arrow-green@2x.png')
+  }
+  panel.panel-speakers {
+    height: 2300px
+  }
+  panel.panel-speakers box.map loud {
+    background-image: url('../images/venue-icon@2x.png')
+  }
+  panel.panel-speakers box.more loud {
+    background-image: url('../images/speakers-icon@2x.png')
+  }
+  panel.panel-schedule {
+    height: auto
+  }
+}
+
+#tekst_1_ {
+  opacity: 0;
+}
